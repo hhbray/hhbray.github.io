@@ -4,6 +4,7 @@
     <title>javaweb学习经验</title>
     <url>/2020/09/18/paper-s-name/</url>
     <content><![CDATA[<h1 id="javaweb用mybatis的select查询时数据库中有对象，但是返回的对象为null"><a href="#javaweb用mybatis的select查询时数据库中有对象，但是返回的对象为null" class="headerlink" title="javaweb用mybatis的select查询时数据库中有对象，但是返回的对象为null"></a>javaweb用mybatis的select查询时数据库中有对象，但是返回的对象为null</h1><p>问题：<br>程序里面写的 sql 语句放到数据库控制台里能查询到数据，但是在 MyBatis 里查询结果为 null。</p>
+<a id="more"></a>
 <p>原因：<br>在使用select*时需要注意以下方面：<br>1，数据库表中属性有没有和java实体的属性一一对应；<br>2，get和set方法有没有问题；</p>
 <p><img src="https://img-blog.csdnimg.cn/20200917120715712.PNG#pic_center">实体User</p>
 <p><img src="https://img-blog.csdnimg.cn/20200917120715690.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzc4MzIwNg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述">数据库中表的属性</p>
